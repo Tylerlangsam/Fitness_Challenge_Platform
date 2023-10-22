@@ -30,7 +30,13 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
 INSTALLED_APPS = [
+    'challenges',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
