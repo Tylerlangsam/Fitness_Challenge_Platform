@@ -11,3 +11,13 @@ export const listChallenges = async () => {
     throw error;
   }
 };
+
+export const getChallengeDetails = async (challengeId) => {
+  try {
+    const response = await axios.get(`${BASE_URL}challenges/${challengeId}/`);
+    return response.data;
+  } catch (error) {
+    console.error(`Error fetching challenge details for ID ${challengeId}:`, error);
+    throw error;
+  }
+};
